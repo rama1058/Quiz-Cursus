@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeLearn Academy - Kursus IT Profesional</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-info" href="#"><i class="fas fa-terminal me-2"></i>CodeLearn</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-3 me-lg-2 mt-2 mt-lg-0">
+                        <button id="darkModeToggle" class="btn btn-outline-light btn-sm rounded-circle px-2">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a class="btn btn-info text-white btn-sm px-4 rounded-pill fw-semibold shadow-sm" href="#courses">Daftar Kelas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="py-5 section-hero text-center text-lg-start position-relative overflow-hidden">
+        <div class="container py-5 mt-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <span class="badge bg-info text-dark mb-3 px-3 py-2 rounded-pill fw-bold">🚀 Pendaftaran Batch #1 Dibuka</span>
+                    <h1 class="display-4 fw-bold mb-3">Jangan Cuma Copas Kode, <span class="text-info">Pahami Konsepnya!</span></h1>
+                    <p class="lead text-muted mb-4">Akselerasi skill ngoding Mu dari nol sampe jago bareng mentor praktisi. Cocok buat mahasiswa IT yang mau nambah portofolio beneran.</p>
+                    <a href="#courses" class="btn btn-info btn-lg text-white me-2 px-4 rounded-pill shadow-sm">Mulai Belajar</a>
+                    <a href="#about" class="btn btn-outline-secondary btn-lg px-4 rounded-pill">Explore Dulu</a>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0 text-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="image/style.jpg" alt="Coding Illustration" class="img-fluid rounded-4 shadow-lg header-img">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-5">
+        <div class="container py-5 mt-3">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-5 mb-md-0 position-relative" data-aos="zoom-in-up" data-aos-duration="800">
+                    <div class="bg-info rounded-4 position-absolute w-100 h-100" style="top: -20px; left: -20px; z-index: 0; opacity: 0.2;"></div>
+                    <img src="image/style2.jpg" alt="CodeLearn Office" class="img-fluid rounded-4 shadow-lg position-relative" style="z-index: 1;">
+                </div>
+                <div class="col-md-6 ps-md-5" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <h2 class="fw-bold mb-4">Kenapa Harus CodeLearn?</h2>
+                    <p class="text-muted lh-lg">Kita tau banget perasaan mahasiswa IT yang pusing sama teori tapi bingung pas disuruh praktek. CodeLearn hadir buat menjembatani teori kampus sama kebutuhan industri yang serba cepat.</p>
+                    <div class="mt-4 border-start border-info border-4 ps-3">
+                        <h5 class="fw-bold"><i class="fas fa-eye text-info me-2"></i>Visi Kami</h5>
+                        <p class="text-muted mb-0">Jadi tongkrongan belajar digital paling santai tapi berbobot se-Indonesia.</p>
+                    </div>
+                    <div class="mt-4 border-start border-info border-4 ps-3">
+                        <h5 class="fw-bold"><i class="fas fa-bullseye text-info me-2"></i>Misi Kami</h5>
+                        <p class="text-muted mb-0">Ngasih materi yang langsung ke intinya (no basa-basi), full praktek, dan ngebimbing lu ngerjain *real-project* dari klien.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-5 bg-light transition-bg">
+        <div class="container py-5 text-center">
+            <h2 class="fw-bold mb-5" data-aos="fade-up">Keunggulan Belajar di Sini</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 bg-card rounded-4 shadow-sm h-100 card-hover border-0">
+                        <div class="icon-box bg-info-subtle text-info rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center shadow-sm" style="width: 80px; height: 80px;">
+                            <i class="fas fa-laptop-code fa-2x"></i>
+                        </div>
+                        <h5 class="fw-bold">Kurikulum Industri</h5>
+                        <p class="text-muted mb-0">Materi *up-to-date* bahas teknologi yang beneran lagi dipake di perusahaan. Bukan sekadar *Hello World*.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-4 bg-card rounded-4 shadow-sm h-100 card-hover border-0">
+                        <div class="icon-box bg-info-subtle text-info rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center shadow-sm" style="width: 80px; height: 80px;">
+                            <i class="fas fa-users fa-2x"></i>
+                        </div>
+                        <h5 class="fw-bold">Mentor Praktisi</h5>
+                        <p class="text-muted mb-0">Lu bakal dibimbing langsung sama *Software Engineer* dan spesialis siber yang udah makan asam garam di lapangan.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-4 bg-card rounded-4 shadow-sm h-100 card-hover border-0">
+                        <div class="icon-box bg-info-subtle text-info rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center shadow-sm" style="width: 80px; height: 80px;">
+                            <i class="fas fa-infinity fa-2x"></i>
+                        </div>
+                        <h5 class="fw-bold">Akses Selamanya</h5>
+                        <p class="text-muted mb-0">Bayar sekali, kelas dan forum diskusinya bisa lu akses kapan aja pas butuh *refresh* materi. Bebas pusing!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="py-5">
+        <div class="container py-5">
+            <h2 class="fw-bold text-center mb-5" data-aos="fade-up">Pilihan Kelas Tersedia</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card h-100 shadow-sm border-0 bg-card card-hover rounded-4 overflow-hidden">
+                        <img src="image/web_development.jpg" class="card-img-top" alt="Web Dev">
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Web Development Bootcamp</h5>
+                            <p class="card-text text-muted text-sm">Slicing UI dari Figma ke HTML/CSS, manipulasi DOM pakai JS murni, sampai integrasi framework modern.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4 pt-3 border-top">
+                                <span class="badge bg-dark px-3 py-2 fs-6">Rp 499.000</span>
+                                <a href="#contact" class="btn btn-outline-info btn-sm rounded-pill px-4 fw-bold">Join Kelas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card h-100 shadow-sm border-0 bg-card card-hover rounded-4 overflow-hidden">
+                        <img src="image/python.jpg" class="card-img-top" alt="Python">
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Python & Basis Data</h5>
+                            <p class="card-text text-muted text-sm">Pemrosesan data dasar, struktur database SQL (MariaDB), sampai bikin visualisasi yang gampang dipahamin.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4 pt-3 border-top">
+                                <span class="badge bg-dark px-3 py-2 fs-6">Rp 599.000</span>
+                                <a href="#contact" class="btn btn-outline-info btn-sm rounded-pill px-4 fw-bold">Join Kelas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="300">
+                    <div class="card h-100 shadow-sm border-0 bg-card card-hover rounded-4 overflow-hidden">
+                        <img src="image/coding.jpg" class="card-img-top" alt="Cybersecurity">
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Dasar-Dasar Cybersecurity</h5>
+                            <p class="card-text text-muted text-sm">Ngupas tuntas layer jaringan, analisis protokol, sampe mitigasi serangan *Man-in-the-Middle* bareng ahlinya.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4 pt-3 border-top">
+                                <span class="badge bg-dark px-3 py-2 fs-6">Rp 699.000</span>
+                                <a href="#contact" class="btn btn-outline-info btn-sm rounded-pill px-4 fw-bold">Join Kelas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-5 bg-light transition-bg position-relative overflow-hidden">
+        <div class="container py-5">
+            <h2 class="fw-bold text-center mb-5" data-aos="zoom-in">Review Jujur Alumni</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 bg-card rounded-4 shadow-sm h-100 d-flex flex-column card-hover position-relative">
+                        <i class="fas fa-quote-left fa-3x text-info opacity-25 position-absolute" style="top: 20px; right: 20px;"></i>
+                        <p class="text-muted lh-lg mt-2 mb-4 flex-grow-1">"Materi web dev-nya daging semua! Dulu cuma bisa rakit HTML berantakan, sekarang paham struktur komponen yang rapi. Worth it parah sih ini buat modal magang."</p>
+                        <div class="d-flex align-items-center border-top pt-3 mt-auto">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80" class="rounded-circle me-3 border border-2 border-info" alt="Alumni 1" style="width: 50px; height: 50px; object-fit: cover;">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Dina Marlina</h6>
+                                <small class="text-info fw-semibold">Frontend Dev</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-4 bg-card rounded-4 shadow-sm h-100 d-flex flex-column card-hover position-relative">
+                        <i class="fas fa-quote-left fa-3x text-info opacity-25 position-absolute" style="top: 20px; right: 20px;"></i>
+                        <p class="text-muted lh-lg mt-2 mb-4 flex-grow-1">"Kelas Siber-nya ngebahas mitigasi serangan secara praktikal, bukan cuma teori ngawang. Penjelasan soal layer network-nya nyambung banget sama matkul di kampus."</p>
+                        <div class="d-flex align-items-center border-top pt-3 mt-auto">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80" class="rounded-circle me-3 border border-2 border-info" alt="Alumni 2" style="width: 50px; height: 50px; object-fit: cover;">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Kevin Sanjaya</h6>
+                                <small class="text-info fw-semibold">IT Security Enthusiast</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-4 bg-card rounded-4 shadow-sm h-100 d-flex flex-column card-hover position-relative">
+                        <i class="fas fa-quote-left fa-3x text-info opacity-25 position-absolute" style="top: 20px; right: 20px;"></i>
+                        <p class="text-muted lh-lg mt-2 mb-4 flex-grow-1">"Bimbingan mentornya mantap, kodingan Python gw yang sering *error* langsung dikasih tau *best practice*-nya gimana. Diajarin koneksi ke database MariaDB juga!"</p>
+                        <div class="d-flex align-items-center border-top pt-3 mt-auto">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&h=100&q=80" class="rounded-circle me-3 border border-2 border-info" alt="Alumni 3" style="width: 50px; height: 50px; object-fit: cover;">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Arga Dinata</h6>
+                                <small class="text-info fw-semibold">Backend Eng Intern</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-5">
+        <div class="container py-5">
+            <h2 class="fw-bold text-center mb-5" data-aos="fade-up">Galeri Aktivitas Belajar</h2>
+            <div class="row g-3">
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="overflow-hidden rounded-4 shadow-sm gallery-box position-relative">
+                        <img src="image/meeting.jpg" class="img-fluid w-100" alt="Sesi Ngoding 1">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="overflow-hidden rounded-4 shadow-sm gallery-box position-relative">
+                        <img src="image/lapto.jpg" class="img-fluid w-100" alt="Diskusi Tim 1">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="overflow-hidden rounded-4 shadow-sm gallery-box position-relative">
+                        <img src="image/belajar.jpg" class="img-fluid w-100" alt="Presentasi Proyek 1">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="250">
+                    <div class="overflow-hidden rounded-4 shadow-sm gallery-box position-relative">
+                        <img src="image/kerja1.jpg" class="img-fluid w-100" alt="Sesi Ngoding 2">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="overflow-hidden rounded-4 shadow-sm gallery-box position-relative">
+                        <img src="image/laptop.jpg" class="img-fluid w-100" alt="Diskusi Tim 2">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="350">
+                    <div class="overflow-hidden rounded-4 shadow-sm gallery-box position-relative">
+                        <img src="image/kerja2.jpg" class="img-fluid w-100" alt="Presentasi Proyek 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-light transition-bg position-relative">
+        <div class="container py-5" style="max-width: 650px;">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold">Masih Punya Pertanyaan?</h2>
+                <p class="text-muted">Isi form di bawah, tim admin kita bakal bales secepat kilat ke email lu.</p>
+            </div>
+            
+            <form id="contactForm" class="bg-card p-4 p-md-5 rounded-4 shadow border-0" data-aos="fade-up" data-aos-delay="200">
+                <div class="mb-4">
+                    <label for="name" class="form-label fw-semibold">Nama Lengkap</label>
+                    <input type="text" class="form-control form-control-lg bg-light border-0" id="name" placeholder="Masukin nama lengkap lu">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="form-label fw-semibold">Alamat Email Aktif</label>
+                    <input type="text" class="form-control form-control-lg bg-light border-0" id="email" placeholder="contoh: star@email.com">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="form-label fw-semibold">Pertanyaan atau Pesan</label>
+                    <textarea class="form-control form-control-lg bg-light border-0" id="message" rows="4" placeholder="Ketik aja di sini apa yang mau ditanya..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-info btn-lg text-white w-100 fw-bold shadow-sm rounded-3 mt-2">
+                    <i class="fas fa-paper-plane me-2"></i>Kirim Pesan Sekarang
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4 border-bottom border-secondary pb-4 mb-4">
+                <div class="col-md-4">
+                    <h5 class="fw-bold text-info mb-3"><i class="fas fa-terminal me-2"></i>CodeLearn</h5>
+                    <p class="text-secondary text-sm pe-md-4">Platform edukasi yang nemenin perjalanan lu dari maba kebingungan sampe jadi IT profesional handal.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold text-white mb-3">Links Navigasi</h5>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><a href="#home" class="text-decoration-none text-secondary hover-info">Home</a></li>
+                        <li class="mb-2"><a href="#courses" class="text-decoration-none text-secondary hover-info">Daftar Kelas</a></li>
+                        <li class="mb-2"><a href="#gallery" class="text-decoration-none text-secondary hover-info">Galeri</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-md-end text-secondary">
+                    <p class="mb-2"><i class="fas fa-map-marker-alt me-2 text-info"></i>Jl. Teknologi Digital No. 101, Banten</p>
+                    <p class="mb-3"><i class="fas fa-envelope me-2 text-info"></i>halo@codelearn.id</p>
+                    <div class="mt-3">
+                        <a href="#" class="text-secondary me-3 fs-5"><i class="fab fa-discord hover-info"></i></a>
+                        <a href="#" class="text-secondary me-3 fs-5"><i class="fab fa-github hover-info"></i></a>
+                        <a href="#" class="text-secondary fs-5"><i class="fab fa-instagram hover-info"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center text-secondary text-sm">
+                <p class="mb-0">&copy; 2026 CodeLearn Academy. All rights reserved.</p>
+                <p class="mt-2 fw-semibold" style="color: #64748b;">
+                    <i class="fas fa-code text-info"></i> Developed with ☕ by <span class="text-light">Rizki Ramadan Syah Lubis</span> & <span class="text-light">Tubagus Nur Ikhsan</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="btn btn-info text-white rounded-circle position-fixed shadow-lg" style="bottom: 30px; right: 30px; width: 50px; height: 50px; display: none; z-index: 1000; transition: all 0.3s ease;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
