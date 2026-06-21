@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Admin - Pendaftar CodeLearn</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        body { background-color: #f1f5f9; padding-top: 50px; font-family: 'Segoe UI', sans-serif; }
+        .card { border: none; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="fw-bold text-dark"><i class="fas fa-users-cog text-info me-2"></i>Dashboard Mahasiswa Pendaftar</h2>
+            <p class="text-muted mb-0">Live data mahasiswa yang submit form pendaftaran kelas via Supabase Cloud.</p>
+        </div>
+        <a href="index.html" class="btn btn-outline-secondary rounded-pill fw-semibold"><i class="fas fa-arrow-left me-2"></i>Kembali</a>
+    </div>
+
+    <div class="card p-4">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-dark">
+                    <tr>
+                        <th style="width: 80px;">No</th>
+                        <th>Nama Lengkap</th>
+                        <th>Alamat Email</th>
+                        <th>Kelas Yang Diambil</th>
+                    </tr>
+                </thead>
+                <tbody id="pendaftar-table-body">
+                    <tr>
+                        <td colspan="4" class="text-center text-muted py-4">
+                            <div class="spinner-border text-info spinner-border-sm me-2" role="status"></div>
+                            Menghubungkan ke server database cloud...
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+    <script>
+        const ADMIN_URL = "https://wlhtnlcdvmnqdbimkqqx.supabase.co";
+        const ADMIN_KEY = "sb_publishable__CwCHKulvoa5mMvgN8EoPw_Hk3ZZ1Yl";
+        const adminSupabase = supabase.createClient(ADMIN_URL, ADMIN_KEY);
+
+        async function loadDataPendaftar() {
+            const tableBody = document.getElementById('pendaftar-table-body');
+            if (!tableBody) return;
+
+            try {
+                if (!adminSupabase || typeof adminSupabase.from !== 'function') {
+                    console.log("Mempersiapkan koneksi cloud, mencoba kembali...");
+                    setTimeout(loadDataPendaftar, 200);
+                    return;
+                }
+
+                const { data: listPendaftar, error } = await adminSupabase
+                    .from('pendaftaran')
+                    .select('*');
+
+                if (error) {
+                    tableBody.innerHTML = `<tr><td colspan="4" class="text-center text-danger">Gagal ambil data: ${error.message}</td></tr>`;
+                    return;
+                }
+
+                if (!listPendaftar || listPendaftar.length === 0) {
+                    tableBody.innerHTML = '<tr><td colspan="4" class="text-center text-muted py-4">Belum ada mahasiswa yang submit pendaftaran kelas.</td></tr>';
+                    return;
+                }
+
+                tableBody.innerHTML = '';
+                listPendaftar.forEach((item, index) => {
+                    tableBody.innerHTML += `
+                        <tr>
+                            <td><strong>${index + 1}</strong></td>
+                            <td class="fw-semibold text-dark">${item.nama_lengkap || '-'}</td>
+                            <td><a href="mailto:${item.email}" class="text-info text-decoration-none">${item.email}</a></td>
+                            <td><span class="badge bg-info text-dark fw-bold px-3 py-2 rounded-pill">${item.kelas_pilihan || '-'}</span></td>
+                        </tr>
+                    `;
+                });
+            } catch (err) {
+                tableBody.innerHTML = `<tr><td colspan="4" class="text-center text-danger">Gagal ambil data: ${err.message || err}</td></tr>`;
+            }
+        }
+
+        window.addEventListener('load', () => {
+            setTimeout(loadDataPendaftar, 300);
+        });
+    </script>
+</body>
+</html>
