@@ -78,9 +78,10 @@ document.addEventListener('DOMContentLoaded', function () {
             const textReview = document.getElementById('rate_review').value.trim();
 
             try {
+                // FIXED: Mengubah properti bintang menjadi rating sesuai kolom database lu
                 const { error } = await _supabase
                     .from('rating_review')
-                    .insert([{ nama: nameReview, bintang: parseInt(scoreReview), ulasan: textReview }]);
+                    .insert([{ nama: nameReview, rating: parseInt(scoreReview), ulasan: textReview }]);
 
                 if (error) {
                     alert("Gagal kirim review ke cloud: " + error.message);
@@ -155,7 +156,8 @@ async function loadCloudReviews() {
 
         reviews.forEach(item => {
             let bintangStars = '';
-            const jumlahBintang = parseInt(item.bintang) || 5;
+            // FIXED: Mengubah pemanggilan item.bintang menjadi item.rating sesuai database lu
+            const jumlahBintang = parseInt(item.rating) || 5;
             for(let i = 0; i < jumlahBintang; i++) {
                 bintangStars += '<i class="fas fa-star text-warning"></i>';
             }
